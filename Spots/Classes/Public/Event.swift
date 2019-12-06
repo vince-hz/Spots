@@ -34,6 +34,15 @@ public enum Event {
     /// 内存警告
     case receiveMemoryWarning
     
+    /// 登录成功
+    case loginSuccess
+    
+    /// 退出登录
+    case resignLogin
+    
+    /// 成为会员的通知
+    case becomeVip
+    
     /// 自定义事件
     case customEvent(value: Int)
 }
