@@ -1,0 +1,23 @@
+{
+  "name": "Spots",
+  "version": "0.0.1",
+  "summary": "A iOS function modules manager",
+  "description": "Spread the event each component",
+  "homepage": "https://github.com/许允是/Spots",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "许允是": "405029644@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/许允是/Spots.git",
+    "tag": "0.0.1"
+  },
+  "swift_version": "5.0",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "Spots/Classes/**/*"
+}

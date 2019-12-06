@@ -1,0 +1,6 @@
+framework module PublicProtocols {
+  umbrella header "PublicProtocols-umbrella.h"
+
+  export *
+  module * { export * }
+}

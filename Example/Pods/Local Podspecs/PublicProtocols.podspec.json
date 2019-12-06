@@ -1,0 +1,27 @@
+{
+  "name": "PublicProtocols",
+  "version": "0.1.0",
+  "summary": "A short description of PublicProtocols.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/许允是/PublicProtocols",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "许允是": "405029644@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/许允是/PublicProtocols.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "PublicProtocols/Classes/**/*",
+  "dependencies": {
+    "Spots": [
+
+    ]
+  }
+}

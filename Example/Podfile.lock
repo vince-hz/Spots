@@ -1,0 +1,29 @@
+PODS:
+  - ModuleA (0.1.0):
+    - PublicProtocols
+    - Spots
+  - PublicProtocols (0.1.0):
+    - Spots
+  - Spots (0.0.1)
+
+DEPENDENCIES:
+  - ModuleA (from `../ModuleA/`)
+  - PublicProtocols (from `../PublicProtocols/`)
+  - Spots (from `../`)
+
+EXTERNAL SOURCES:
+  ModuleA:
+    :path: "../ModuleA/"
+  PublicProtocols:
+    :path: "../PublicProtocols/"
+  Spots:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ModuleA: 3c49635a28e9c19e1f73da4735bb4afe72ec8140
+  PublicProtocols: fc587c575ee46a255c3dd83add16639bd048990f
+  Spots: daf2b60d8fe8d0fb4b9842b083009a4711bcf5d0
+
+PODFILE CHECKSUM: 7c0d839ff65521ff3ce6a7bd1829b7e4ab40fd68
+
+COCOAPODS: 1.6.1

@@ -2,6 +2,8 @@ use_frameworks!
 
 target 'Spots_Example' do
   pod 'Spots', :path => '../'
+  pod 'ModuleA', :path => '../ModuleA/'
+  pod 'PublicProtocols', :path => '../PublicProtocols/'
 
   target 'Spots_Tests' do
     inherit! :search_paths
