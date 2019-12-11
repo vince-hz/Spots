@@ -15,7 +15,7 @@ import Foundation
     
     public static let shared = SpotsManager()
     
-    public let context = SpotsContext.shared
+    public var context: SpotsContext!
     
     // MARK: - Moduels
     

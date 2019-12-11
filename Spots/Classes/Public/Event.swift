@@ -10,7 +10,7 @@ import Foundation
 /// 生命周期事件，由宿主发起, 也可以由子模块发起
 public enum Event {
     
-    /// 初始化
+    /// 初始化(finishLaunch)
     case setup
     
     /// 注册推送成功
@@ -42,6 +42,9 @@ public enum Event {
     
     /// 成为会员的通知
     case becomeVip
+    
+    /// 成为非会员的通知
+    case becomeNoneVip
     
     /// 自定义事件
     case customEvent(value: Int)

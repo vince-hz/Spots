@@ -11,9 +11,9 @@ open class SpotsAppdelegate: UIResponder, UIApplicationDelegate {
     
     open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-        ModuleManager.shared.trigger(event: .setup)
+        SpotsManager.shared.context.launchOptions = launchOptions
         
-        SpotsContext.shared.launchOptions = launchOptions
+        ModuleManager.shared.trigger(event: .setup)
         
         return true
     }

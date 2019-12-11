@@ -17,11 +17,28 @@ public enum Environment {
 /// 全局上下文
 public class SpotsContext {
     
-    static let shared = SpotsContext()
+    public init(url: URL, environment: Environment) {
+        self.baseURL = url
+        self.environment = environment
+    }
     
-    private init() {}
+    /// 是否社交电商
+    public var isSocialMall: Bool = true
     
-    public var environment: Environment = .develop
+    /// 微信appid
+    public var wxAppId: String?
+    
+    /// 微信secret
+    public var wxSecret: String?
+    
+    /// 业务url
+    public var baseURL: URL
+    
+    /// 更新secret
+    public var versionUpdateSecret: String?
+    
+    /// 环境
+    public var environment: Environment
     
     public var launchOptions: [UIApplication.LaunchOptionsKey : Any]?
 }

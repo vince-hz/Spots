@@ -10,7 +10,7 @@ import Foundation
 /// 子模块管理
 public class ModuleManager: NSObject, UIApplicationDelegate {
     
-    static let shared = ModuleManager()
+    public static let shared = ModuleManager()
     
     private override init() {}
     
