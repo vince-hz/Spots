@@ -31,6 +31,9 @@ public class SpotsContext {
     /// 微信secret
     public var wxSecret: String?
     
+    /// 应用的Scheme(用于其他应用唤醒)
+    public var appScheme: String?
+    
     /// 业务url
     public var baseURL: URL
     
