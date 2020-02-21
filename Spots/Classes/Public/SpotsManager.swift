@@ -28,4 +28,16 @@ import Foundation
         
         return ModuleManager.shared.dequeueImpFor(proto)
     }
+    
+    /// 增加事件响应者
+    public func addEventResponder(_ responder: SpotEventResponder) {
+        
+        ModuleManager.shared.addResponder(responder)
+    }
+    
+    /// 去除事件响应者
+    public func removeEventResponder(_ responder: SpotEventResponder) {
+        
+        ModuleManager.shared.removeResponder(responder)
+    }
 }

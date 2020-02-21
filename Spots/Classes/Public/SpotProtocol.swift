@@ -12,6 +12,10 @@ import UIKit
 public protocol SpotProtocol {
     
     var priority: Priority { get }
+    func handleEvent(_ event: Event)
+}
+
+public protocol SpotEventResponder: class {
     
     func handleEvent(_ event: Event)
 }
