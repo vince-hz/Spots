@@ -40,4 +40,10 @@ import Foundation
         
         ModuleManager.shared.removeResponder(responder)
     }
+    
+    /// 主动发起事件
+    public func trigger(event: Event) {
+        
+        ModuleManager.shared.trigger(event: event)
+    }
 }
