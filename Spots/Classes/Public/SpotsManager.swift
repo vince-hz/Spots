@@ -13,6 +13,9 @@ import Foundation
     
     private override init() {}
     
+    // 自定义区块， 一般用于把宿主事件提供给子模块调用
+    private var customActions: [String: (()->Void)] = [:]
+    
     public static let shared = SpotsManager()
     
     public var context: SpotsContext!
@@ -45,5 +48,17 @@ import Foundation
     public func trigger(event: Event) {
         
         ModuleManager.shared.trigger(event: event)
+    }
+    
+    /// 注册宿主事件
+    public func registerHostAction(_ action: @escaping (()->Void), for title: String) {
+        customActions[title] = action
+    }
+    
+    /// 触发自定义事件
+    public func triggerHostAction(with title: String) {
+        if let block = customActions[title] {
+            block()
+        }
     }
 }
