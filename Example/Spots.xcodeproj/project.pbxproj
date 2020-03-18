@@ -310,8 +310,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Spots_Example/Pods-Spots_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ModuleA/ModuleA.framework",
@@ -319,8 +317,6 @@
 				"${BUILT_PRODUCTS_DIR}/Spots/Spots.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ModuleA.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PublicProtocols.framework",
