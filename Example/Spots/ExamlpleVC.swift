@@ -18,6 +18,10 @@ class ExamlpleVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func onClickCrossModule(_ sender: Any) {
+        let imp = SpotsManager.shared.dequeueImpFor(ModuleA.self) as! ModuleA
+        imp.crossGet()
+    }
     @IBAction func method(_ sender: Any) {
         let imp = SpotsManager.shared.dequeueImpFor(ModuleA.self) as! ModuleA
         imp.methodA()

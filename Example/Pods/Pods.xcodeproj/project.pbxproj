@@ -34,6 +34,7 @@
 		AF28AA1125C3BC11ED22FFCB37072C21 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3546C32B98FA42462377AAE19F5AB8 /* ReplaceMe.swift */; };
 		C3E7751F592F17F18284A07BD696A6D6 /* SpotProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0746975E23AABE396B68FEFF5191D8 /* SpotProtocol.swift */; };
 		EE3F7A1B5F49227BD85A23505929C6A5 /* Spots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B249DA9CA6109BF5C55FBC8C0977A816 /* Spots.framework */; };
+		F6B2A27E2421ED4D00FCD98F /* CrossModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B2A27D2421ED4D00FCD98F /* CrossModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +149,7 @@
 		DFD8C1EC7AB9ACBC69AF00E9232A48E4 /* PublicProtocols.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PublicProtocols.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E5ED88C7ECC75B85D518C064E37DC7E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F0D7442303B34AE58CF27C420029BE26 /* ModuleA.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ModuleA.modulemap; sourceTree = "<group>"; };
+		F6B2A27D2421ED4D00FCD98F /* CrossModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossModule.swift; sourceTree = "<group>"; };
 		F6D6AB25C3DF6801C325C0A78EA80B07 /* Pods_Spots_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spots_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A625CCB9BB72C4D56EC6882B41B966 /* Pods-Spots_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Spots_Example-umbrella.h"; sourceTree = "<group>"; };
 		FD7373EBD800C71C5D2B30B6B228AA24 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 				48730C86DC74BD13AE27F242E9094D66 /* SpotsAppdelegate.swift */,
 				16E1455ECEBA9512B6B57C1EDD0AB4FE /* SpotsContext.swift */,
 				5267AC331552E1C4A0C78EB2DF048219 /* SpotsManager.swift */,
+				F6B2A27D2421ED4D00FCD98F /* CrossModule.swift */,
 				21C7B7D3177674B1FF5B658FDFE0645F /* Pod */,
 				4445196B5FBF2AFC59B232326723F03D /* Support Files */,
 			);
@@ -649,6 +652,7 @@
 			files = (
 				10192A0D483EF86ED4D9E88F9072B6CE /* Event.swift in Sources */,
 				43C398A1C22616FE0407602382AE14A2 /* ModuleManager.swift in Sources */,
+				F6B2A27E2421ED4D00FCD98F /* CrossModule.swift in Sources */,
 				40AACF7CED7B66FC1E3F709F4E3FE963 /* Priority.swift in Sources */,
 				C3E7751F592F17F18284A07BD696A6D6 /* SpotProtocol.swift in Sources */,
 				3578D155ED0F17B357D6E6E2F39E075B /* Spots-dummy.m in Sources */,

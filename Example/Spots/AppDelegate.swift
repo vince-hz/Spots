@@ -18,7 +18,8 @@ class AppDelegate: SpotsAppdelegate {
     
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 
-        SpotsManager.shared.context.environment = .develop
+        let context = SpotsContext(url: URL(string: "http://s.com")!, environment: .develop)
+        SpotsManager.shared.context = context
         
         _ = super.application(application, didFinishLaunchingWithOptions: launchOptions)
         
@@ -28,7 +29,16 @@ class AppDelegate: SpotsAppdelegate {
         self.window?.rootViewController = ExamlpleVC()
         self.window?.makeKeyAndVisible()
         
+        SpotsManager.shared.registerCrossModuleDataHandler(self)
+        
         return true
     }
 }
 
+
+extension AppDelegate: CrossModuleDataTransHandler {
+    
+    func respondToRequest(identifier: String, userInfo: [String : Any]?) -> [String : Any]? {
+        return ["value": "your identifier is \(identifier)", "info": userInfo ?? []]
+    }
+}

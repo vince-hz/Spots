@@ -55,6 +55,16 @@ import Foundation
         customActions[title] = action
     }
     
+    /// 同步请求跨模块数据
+    public func syncRequestCrossModuleDataFor(identifier: String, otherInfo: [String: Any]?) -> [String: Any]? {
+        return CrossModuleDataTransManager.shared.handleRequest(identifier: identifier, userInfo: otherInfo)
+    }
+    
+    /// 注册跨模块调用的响应者
+    public func registerCrossModuleDataHandler(_ handler: CrossModuleDataTransHandler) {
+        CrossModuleDataTransManager.shared.registerResponder(handler)
+    }
+    
     /// 触发自定义事件
     public func triggerHostAction(with title: String) {
         if let block = customActions[title] {
