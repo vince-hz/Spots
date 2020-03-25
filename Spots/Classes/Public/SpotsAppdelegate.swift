@@ -43,6 +43,12 @@ open class SpotsAppdelegate: UIResponder, UIApplicationDelegate {
         ModuleManager.shared.trigger(event: .willTerminate)
     }
     
+    public func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        
+        ModuleManager.shared.trigger(event: .universalLink(activity: userActivity))
+        return true
+    }
+    
     open func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         
         // 将来如果要做访问验证，可以修改

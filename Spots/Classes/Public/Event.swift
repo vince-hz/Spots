@@ -31,6 +31,9 @@ public enum Event {
     /// 其他应用打开
     case openFrom(url: URL)
     
+    /// universalLink
+    case universalLink(activity: NSUserActivity)
+    
     /// 内存警告
     case receiveMemoryWarning
     
