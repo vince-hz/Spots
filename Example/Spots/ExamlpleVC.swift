@@ -32,6 +32,11 @@ class ExamlpleVC: UIViewController {
         print(imp.getCount())
     }
     
+    @IBAction func crossModuleAction(_ sender: Any) {
+        let imp = SpotsManager.shared.dequeueImpFor(ModuleA.self) as! ModuleA
+        imp.someCrossModulesMethod()
+    }
+    
     @IBAction func obj(_ sender: Any) {
         let imp = SpotsManager.shared.dequeueImpFor(ModuleA.self) as! ModuleA
         print(imp.getObject())

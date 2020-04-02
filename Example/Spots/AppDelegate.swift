@@ -30,11 +30,22 @@ class AppDelegate: SpotsAppdelegate {
         self.window?.makeKeyAndVisible()
         
         SpotsManager.shared.registerCrossModuleDataHandler(self)
+        SpotsManager.shared.addEventResponder(self)
         
         return true
     }
 }
 
+extension AppDelegate: SpotEventResponder {
+    func handleEvent(_ event: Event) {
+        switch event {
+        case .customEvent(value: let value):
+            print("whooa, you push a action and responder by an other responder")
+        default:
+            return
+        }
+    }
+}
 
 extension AppDelegate: CrossModuleDataTransHandler {
     
