@@ -17,7 +17,17 @@ import Foundation
     
     public var context: SpotsContext!
     
+    private var globalRouter: GlobalRouter?
+    
     // MARK: - Moduels
+    
+    public func setGlobalRouter(_ r: GlobalRouter) {
+        self.globalRouter = r
+    }
+    
+    public func globalRouter(type: Int, param: String) {
+        globalRouter?.handleCommonEvent(type: type, param: param)
+    }
     
     public func registerImp(_ imp: SpotProtocol, for module: Any) {
         
