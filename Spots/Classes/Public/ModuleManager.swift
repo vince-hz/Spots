@@ -8,9 +8,9 @@
 import Foundation
 
 /// 子模块管理
-public class ModuleManager: NSObject, UIApplicationDelegate {
+class ModuleManager: NSObject, UIApplicationDelegate {
     
-    public static let shared = ModuleManager()
+    static let shared = ModuleManager()
     
     private override init() {}
     
@@ -25,24 +25,45 @@ public class ModuleManager: NSObject, UIApplicationDelegate {
         }
     }
     
+    // 非模块 事件响应者
+    private var eventResponders: [SpotEventResponder] = []
+    
     // 按顺序值重排后的模块数组
     var sortedModules: [SpotProtocol] = []
     
     /// 发起事件，可以由主模块Appdelegate下发，也可以由子模块主动触发
-    public func trigger(event: Event) {
-        
+    func trigger(event: Event) {
+
         sortedModules.forEach { $0.handleEvent(event) }
+        eventResponders.forEach { $0.handleEvent(event) }
+    }
+    
+    // 增加事件响应者
+    func addResponder(_ responder: SpotEventResponder) {
+        let contain = eventResponders.contains { (item) -> Bool in
+            return item === responder
+        }
+        if contain { return }
+        eventResponders.append(responder)
+    }
+    
+    // 去除响应者
+    func removeResponder(_ responder: SpotEventResponder) {
+        
+        eventResponders.removeAll { (item) -> Bool in
+            return item === responder
+        }
     }
     
     /// 向对应的模块协议注册实现
-    public func registerImp(_ imp: SpotProtocol, for module: Any) {
+    func registerImp(_ imp: SpotProtocol, for module: Any) {
         
         let des = String(describing: module)
         moduleDic[des] = imp
     }
     
     /// 获取模块协议的实现
-    public func dequeueImpFor(_ proto: Any)-> Any? {
+    func dequeueImpFor(_ proto: Any)-> Any? {
         
         let des = String(describing: proto)
         let i = moduleDic[des]

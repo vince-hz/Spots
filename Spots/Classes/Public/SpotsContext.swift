@@ -28,6 +28,9 @@ public class SpotsContext {
     /// 微信appid
     public var wxAppId: String?
     
+    /// 主要提供给微信用
+    public var universalLink: String?
+    
     /// 微信secret
     public var wxSecret: String?
     

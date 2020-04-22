@@ -31,6 +31,9 @@ public enum Event {
     /// 其他应用打开
     case openFrom(url: URL)
     
+    /// universalLink
+    case universalLink(activity: NSUserActivity)
+    
     /// 内存警告
     case receiveMemoryWarning
     
@@ -47,5 +50,6 @@ public enum Event {
     case becomeNoneVip
     
     /// 自定义事件
+    /// 这里的custom定义可以放到一个公共库里, 也可以硬编码，看应用的跨模块调用规模。
     case customEvent(value: Int)
 }
